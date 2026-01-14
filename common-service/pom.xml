@@ -73,6 +73,12 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
+			<groupId>com.example</groupId>
+			<artifactId>common-service</artifactId>
+			<version>0.0.1-SNAPSHOT</version> <!-- Match version of common-service -->
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-webmvc-test</artifactId>
 			<scope>test</scope>

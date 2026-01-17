@@ -1,5 +1,7 @@
 package com.leave.www.model;
 
+import com.common.www.model.BaseEntity;
+import com.common.www.model.User;
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Transient;

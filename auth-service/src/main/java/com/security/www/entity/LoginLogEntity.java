@@ -1,6 +1,7 @@
 package com.security.www.entity;
 import java.util.UUID;
 
+import com.common.www.model.BaseEntity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Index;
@@ -17,7 +18,7 @@ import lombok.*;
            @Index(name="idx_login_user", columnList="userId"),
            @Index(name="idx_login_method", columnList="loginMethod")
        })
-public class LoginLogEntity extends BaseUuidEntity {
+public class LoginLogEntity extends BaseEntity {
 
     @Column(nullable = false, columnDefinition = "uuid")
     private UUID userId;

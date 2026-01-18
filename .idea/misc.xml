@@ -20,6 +20,16 @@
         <option value="$PROJECT_DIR$/different-role-se/pom.xml" />
       </list>
     </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/audit-service/pom.xml" />
+        <option value="$PROJECT_DIR$/different-role-se/pom.xml" />
+        <option value="$PROJECT_DIR$/document-service/pom.xml" />
+        <option value="$PROJECT_DIR$/holiday-service/pom.xml" />
+        <option value="$PROJECT_DIR$/notification-service-1/pom.xml" />
+        <option value="$PROJECT_DIR$/task-service/pom.xml" />
+      </set>
+    </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="21" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />

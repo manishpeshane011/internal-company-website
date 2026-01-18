@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -11,34 +12,27 @@
         <module name="discovery-server" />
         <module name="gateway" />
       </profile>
-      <profile name="Annotation profile for leave-service" enabled="true">
+      <profile name="Annotation profile for payroll-service" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
         </processorPath>
-        <module name="different-role-se" />
-        <module name="common-service" />
-        <module name="payroll-service" />
-        <module name="audit-service" />
-        <module name="attendance-service" />
         <module name="leave-service" />
-        <module name="holiday-service" />
-        <module name="document-service" />
-      </profile>
-      <profile name="Annotation profile for notification-service-1" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="false">
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
-        </processorPath>
-        <module name="notification-service-1" />
-        <module name="task-service" />
+        <module name="payroll-service" />
+        <module name="common-service" />
+        <module name="attendance-service" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="audit-service" target="17" />
+      <module name="different-role-se" target="17" />
+      <module name="document-service" target="17" />
+      <module name="holiday-service" target="17" />
+      <module name="notification-service-1" target="17" />
+      <module name="task-service" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">

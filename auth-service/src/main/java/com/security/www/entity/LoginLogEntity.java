@@ -2,33 +2,37 @@ package com.security.www.entity;
 import java.util.UUID;
 
 import com.common.www.model.BaseEntity;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Index;
-import jakarta.persistence.Lob;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.*;
 
-@Getter @Setter
-@NoArgsConstructor @AllArgsConstructor
-@Builder
 @Entity
-@Table(name = "login_logs",
-       indexes = {
-           @Index(name="idx_login_user", columnList="userId"),
-           @Index(name="idx_login_method", columnList="loginMethod")
-       })
+@Table(
+        name = "login_logs",
+        indexes = {
+                @Index(name = "idx_login_user", columnList = "user_id"),
+                @Index(name = "idx_login_method", columnList = "login_method")
+        }
+)
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class LoginLogEntity extends BaseEntity {
 
-    @Column(nullable = false, columnDefinition = "uuid")
-    private UUID userId;
+    // ❌ DO NOT use UUID with columnDefinition=uuid for MySQL
+    // ✅ Use String for cross-service reference
+    @Column(name = "user_id", nullable = false, length = 36)
+    private String userId;
 
-    @Column(length = 45)
+    @Column(name = "ip_address", length = 45)
     private String ipAddress;
 
     @Lob
+    @Column(name = "user_agent")
     private String userAgent;
 
-    @Column(nullable = false, length = 50)
-    private String loginMethod = "password";
+    @Column(name = "login_method", nullable = false, length = 50)
+    private String loginMethod;
 }
+

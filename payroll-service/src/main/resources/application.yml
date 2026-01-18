@@ -1,0 +1,14 @@
+
+server:
+  port: 8082
+spring:
+  application:
+    name: payroll-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/payroll_db?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: Coder@9505
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true

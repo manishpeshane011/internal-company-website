@@ -1,0 +1,14 @@
+
+server:
+  port: 8081
+spring:
+  application:
+    name: common-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/common_db?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: Coder@9505
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
